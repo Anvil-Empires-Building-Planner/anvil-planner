@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3lk8mtwxyj5l"]
+[gd_scene load_steps=13 format=3 uid="uid://c3lk8mtwxyj5l"]
 
 [ext_resource type="Script" path="res://editor/script/cursor.gd" id="1_8uddu"]
 [ext_resource type="Script" path="res://editor/script/camera_controller.gd" id="1_hw85h"]
@@ -15,6 +15,18 @@ albedo_texture = ExtResource("6_skn7o")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ts1rb"]
 size = Vector3(2, 1, 2)
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vd2qi"]
+
+[sub_resource type="Sky" id="Sky_a4hvf"]
+sky_material = SubResource("ProceduralSkyMaterial_vd2qi")
+
+[sub_resource type="Environment" id="Environment_4yrho"]
+background_mode = 1
+background_color = Color(0.678431, 0.788235, 0.792157, 1)
+sky = SubResource("Sky_a4hvf")
+ambient_light_source = 3
+tonemap_mode = 2
+
 [node name="Editor" type="Node3D"]
 
 [node name="CameraContoller" type="Node3D" parent="."]
@@ -27,7 +39,8 @@ script = ExtResource("4_y7a0h")
 cursor = NodePath("../../Cursor")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 11.1449, 36.2807, -26.4551)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+light_energy = 0.8
 
 [node name="Cursor" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.13381, 24.279, 2.30481)
@@ -47,5 +60,7 @@ mesh = SubResource("PlaneMesh_njnhm")
 [node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_ts1rb")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4yrho")
