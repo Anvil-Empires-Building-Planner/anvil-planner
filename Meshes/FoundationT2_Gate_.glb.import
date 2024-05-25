@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://db2hagcxoy00m"
-path="res://.godot/imported/FoundationT2_Gate_.glb-30e137124777ffcc4b8b1443c28c2fff.scn"
+path="res://.godot/imported/FoundationT2_Gate_.glb-7b8f1a00b2fc3369b15e49bf2e196db4.scn"
 
 [deps]
 
-source_file="res://Meshes/FoundationT2_Gate_.glb"
-dest_files=["res://.godot/imported/FoundationT2_Gate_.glb-30e137124777ffcc4b8b1443c28c2fff.scn"]
+source_file="res://meshes/FoundationT2_Gate_.glb"
+dest_files=["res://.godot/imported/FoundationT2_Gate_.glb-7b8f1a00b2fc3369b15e49bf2e196db4.scn"]
 
 [params]
 

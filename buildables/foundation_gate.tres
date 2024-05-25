@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Buildable" load_steps=3 format=3 uid="uid://odu5lflbdktl"]
 
-[ext_resource type="Script" path="res://Buildables/Buildable.gd" id="1_4nvtv"]
-[ext_resource type="PackedScene" uid="uid://db2hagcxoy00m" path="res://Meshes/FoundationT2_Gate_.glb" id="1_gsqw2"]
+[ext_resource type="Script" path="res://buildables/buildable.gd" id="1_4nvtv"]
+[ext_resource type="PackedScene" uid="uid://db2hagcxoy00m" path="res://meshes/FoundationT2_Gate_.glb" id="1_gsqw2"]
 
 [resource]
 script = ExtResource("1_4nvtv")

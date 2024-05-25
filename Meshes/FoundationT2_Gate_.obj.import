@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bsuwuna6oans5"
-path="res://.godot/imported/FoundationT2_Gate_.obj-c7042549efde1f9fcb5f2bccf926f60d.mesh"
+path="res://.godot/imported/FoundationT2_Gate_.obj-2f7b6a2595e1810707134bdc20e41532.mesh"
 
 [deps]
 
-files=["res://.godot/imported/FoundationT2_Gate_.obj-c7042549efde1f9fcb5f2bccf926f60d.mesh"]
+files=["res://.godot/imported/FoundationT2_Gate_.obj-2f7b6a2595e1810707134bdc20e41532.mesh"]
 
-source_file="res://Meshes/FoundationT2_Gate_.obj"
-dest_files=["res://.godot/imported/FoundationT2_Gate_.obj-c7042549efde1f9fcb5f2bccf926f60d.mesh", "res://.godot/imported/FoundationT2_Gate_.obj-c7042549efde1f9fcb5f2bccf926f60d.mesh"]
+source_file="res://meshes/FoundationT2_Gate_.obj"
+dest_files=["res://.godot/imported/FoundationT2_Gate_.obj-2f7b6a2595e1810707134bdc20e41532.mesh", "res://.godot/imported/FoundationT2_Gate_.obj-2f7b6a2595e1810707134bdc20e41532.mesh"]
 
 [params]
 

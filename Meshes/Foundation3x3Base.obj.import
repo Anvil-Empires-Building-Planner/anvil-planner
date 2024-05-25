@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b1r4hfqsab8ua"
-path="res://.godot/imported/Foundation3x3Base.obj-992b5e545475865a093f1e31863e0ca6.mesh"
+path="res://.godot/imported/Foundation3x3Base.obj-3925767ee639e14aa0ab1be7156d1bcd.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Foundation3x3Base.obj-992b5e545475865a093f1e31863e0ca6.mesh"]
+files=["res://.godot/imported/Foundation3x3Base.obj-3925767ee639e14aa0ab1be7156d1bcd.mesh"]
 
-source_file="res://Meshes/Foundation3x3Base.obj"
-dest_files=["res://.godot/imported/Foundation3x3Base.obj-992b5e545475865a093f1e31863e0ca6.mesh", "res://.godot/imported/Foundation3x3Base.obj-992b5e545475865a093f1e31863e0ca6.mesh"]
+source_file="res://meshes/Foundation3x3Base.obj"
+dest_files=["res://.godot/imported/Foundation3x3Base.obj-3925767ee639e14aa0ab1be7156d1bcd.mesh", "res://.godot/imported/Foundation3x3Base.obj-3925767ee639e14aa0ab1be7156d1bcd.mesh"]
 
 [params]
 

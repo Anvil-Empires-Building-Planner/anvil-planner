@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dp0dunefft6fp"
-path="res://.godot/imported/Foundation3x3Base.glb-a54d3e002ec9d5c75b1f8ae507247c7b.scn"
+path="res://.godot/imported/Foundation3x3Base.glb-45ffc15a3073843e4fb88273f8f48d6a.scn"
 
 [deps]
 
-source_file="res://Meshes/Foundation3x3Base.glb"
-dest_files=["res://.godot/imported/Foundation3x3Base.glb-a54d3e002ec9d5c75b1f8ae507247c7b.scn"]
+source_file="res://meshes/Foundation3x3Base.glb"
+dest_files=["res://.godot/imported/Foundation3x3Base.glb-45ffc15a3073843e4fb88273f8f48d6a.scn"]
 
 [params]
 

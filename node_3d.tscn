@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://c3lk8mtwxyj5l"]
 
-[ext_resource type="Script" path="res://Cursor.gd" id="1_cunaq"]
-[ext_resource type="Script" path="res://Placer.gd" id="1_gi1t8"]
-[ext_resource type="Resource" uid="uid://cuc5l1hs4w1rt" path="res://Buildables/1x1.tres" id="2_pvw4m"]
-[ext_resource type="Resource" uid="uid://odu5lflbdktl" path="res://Buildables/Gate.tres" id="3_ybgya"]
+[ext_resource type="Script" path="res://cursor.gd" id="1_cunaq"]
+[ext_resource type="Script" path="res://placer.gd" id="1_gi1t8"]
+[ext_resource type="Resource" uid="uid://cuc5l1hs4w1rt" path="res://buildables/foundation_3x3.tres" id="2_pvw4m"]
+[ext_resource type="Resource" uid="uid://odu5lflbdktl" path="res://buildables/foundation_gate.tres" id="3_ybgya"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t0fsi"]
 
