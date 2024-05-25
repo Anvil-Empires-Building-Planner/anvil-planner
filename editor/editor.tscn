@@ -1,12 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3lk8mtwxyj5l"]
+[gd_scene load_steps=10 format=3 uid="uid://c3lk8mtwxyj5l"]
 
 [ext_resource type="Script" path="res://editor/script/cursor.gd" id="1_8uddu"]
 [ext_resource type="Script" path="res://editor/script/camera_controller.gd" id="1_hw85h"]
 [ext_resource type="Resource" uid="uid://cuc5l1hs4w1rt" path="res://editor/buildables/foundation_3x3.tres" id="2_rrh33"]
 [ext_resource type="Resource" uid="uid://odu5lflbdktl" path="res://editor/buildables/foundation_gate.tres" id="3_wkfpg"]
 [ext_resource type="Script" path="res://editor/script/placer.gd" id="4_y7a0h"]
+[ext_resource type="Texture2D" uid="uid://ck1sofmxu5rna" path="res://editor/textures/uv_grid.png" id="6_skn7o"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_t0fsi"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgtkv"]
+albedo_texture = ExtResource("6_skn7o")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_njnhm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ts1rb"]
+size = Vector3(2, 1, 2)
 
 [node name="Editor" type="Node3D"]
 
@@ -32,9 +39,13 @@ old_mesh = ExtResource("3_wkfpg")
 transform = Transform3D(1000, 0, 0, 0, 0.203, 0, 0, 0, 1000, 8.40457, 0, 0)
 visible = false
 
-[node name="Ground" type="StaticBody3D" parent="."]
-transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, 0, 0)
-collision_layer = 2
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_rgtkv")
+mesh = SubResource("PlaneMesh_njnhm")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
-shape = SubResource("BoxShape3D_t0fsi")
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_ts1rb")
