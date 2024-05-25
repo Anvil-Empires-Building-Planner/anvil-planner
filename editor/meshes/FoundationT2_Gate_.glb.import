@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dp0dunefft6fp"
-path="res://.godot/imported/Foundation3x3Base.glb-45ffc15a3073843e4fb88273f8f48d6a.scn"
+uid="uid://db2hagcxoy00m"
+path="res://.godot/imported/FoundationT2_Gate_.glb-e605aa47ee218924a31815a3af0ba757.scn"
 
 [deps]
 
-source_file="res://meshes/Foundation3x3Base.glb"
-dest_files=["res://.godot/imported/Foundation3x3Base.glb-45ffc15a3073843e4fb88273f8f48d6a.scn"]
+source_file="res://editor/meshes/FoundationT2_Gate_.glb"
+dest_files=["res://.godot/imported/FoundationT2_Gate_.glb-e605aa47ee218924a31815a3af0ba757.scn"]
 
 [params]
 

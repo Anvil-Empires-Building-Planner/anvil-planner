@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Anvil Planner"
+run/main_scene="res://editor/editor.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
 [filesystem]

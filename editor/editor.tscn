@@ -1,24 +1,24 @@
 [gd_scene load_steps=6 format=3 uid="uid://c3lk8mtwxyj5l"]
 
-[ext_resource type="Script" path="res://cursor.gd" id="1_cunaq"]
-[ext_resource type="Script" path="res://placer.gd" id="1_gi1t8"]
-[ext_resource type="Resource" uid="uid://cuc5l1hs4w1rt" path="res://buildables/foundation_3x3.tres" id="2_pvw4m"]
-[ext_resource type="Resource" uid="uid://odu5lflbdktl" path="res://buildables/foundation_gate.tres" id="3_ybgya"]
+[ext_resource type="Script" path="res://editor/script/cursor.gd" id="1_8uddu"]
+[ext_resource type="Resource" uid="uid://cuc5l1hs4w1rt" path="res://editor/buildables/foundation_3x3.tres" id="2_rrh33"]
+[ext_resource type="Resource" uid="uid://odu5lflbdktl" path="res://editor/buildables/foundation_gate.tres" id="3_wkfpg"]
+[ext_resource type="Script" path="res://editor/script/placer.gd" id="4_y7a0h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t0fsi"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Editor" type="Node3D"]
 
 [node name="Cursor" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.13381, 24.279, 2.30481)
-script = ExtResource("1_cunaq")
-cursor_mesh = ExtResource("2_pvw4m")
-old_mesh = ExtResource("3_ybgya")
+script = ExtResource("1_8uddu")
+cursor_mesh = ExtResource("2_rrh33")
+old_mesh = ExtResource("3_wkfpg")
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("cursor")]
 transform = Transform3D(-3.06812e-08, -0.701905, 0.712271, 3.11344e-08, 0.712271, 0.701905, -1, 4.37114e-08, 3.55271e-15, 8.13381, 24.279, 2.30481)
 size = 17.19
-script = ExtResource("1_gi1t8")
+script = ExtResource("4_y7a0h")
 cursor = NodePath("../Cursor")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
