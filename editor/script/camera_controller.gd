@@ -5,7 +5,7 @@ extends Node3D
 
 func _process(delta):
 	camera_movement(delta)
-	camera_rotate(delta)
+	camera_rotation(delta)
 
 #Handle input for translation/movement
 func camera_movement(delta) -> void:
@@ -21,6 +21,6 @@ func camera_movement(delta) -> void:
 		translate(direction * finalSpeed * delta)
 
 #Handle input for rotation
-func camera_rotate(delta) -> void:
+func camera_rotation(delta) -> void:
 	var rot_input = Input.get_action_strength("camera_rot_left") - Input.get_action_strength("camera_rot_right")
 	rotate_y(rot_input * base_cam_rot_speed * delta)
