@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpb7517spqnw5"]
+
+[ext_resource type="ArrayMesh" uid="uid://bsuwuna6oans5" path="res://editor/meshes/FoundationT2_Gate_.obj" id="1_bd1pw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ul0ce"]
+size = Vector3(5.995, 6.38568, 3)
+
+[node name="Node3D" type="Area3D"]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.69284, 0)
+shape = SubResource("BoxShape3D_ul0ce")
+
+[node name="FoundationT2Gate" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_bd1pw")
+metadata/_edit_lock_ = true

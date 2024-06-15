@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Buildable" load_steps=3 format=3 uid="uid://odu5lflbdktl"]
 
 [ext_resource type="Script" path="res://editor/buildables/buildable.gd" id="1_4nvtv"]
-[ext_resource type="PackedScene" uid="uid://db2hagcxoy00m" path="res://editor/meshes/FoundationT2_Gate_.glb" id="1_gsqw2"]
+[ext_resource type="PackedScene" uid="uid://bpb7517spqnw5" path="res://editor/instances/FoundationT2_Gate.tscn" id="1_mx2wo"]
 
 [resource]
 script = ExtResource("1_4nvtv")
 name = "1x1"
-scene = ExtResource("1_gsqw2")
+instance = ExtResource("1_mx2wo")
 cost = {}
