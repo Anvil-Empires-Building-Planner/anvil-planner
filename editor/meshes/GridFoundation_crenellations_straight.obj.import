@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0opauw477rg4"
+path="res://.godot/imported/GridFoundation_crenellations_straight.obj-e5af3f452993a4d1d6287b31fdc384ba.mesh"
+
+[deps]
+
+files=["res://.godot/imported/GridFoundation_crenellations_straight.obj-e5af3f452993a4d1d6287b31fdc384ba.mesh"]
+
+source_file="res://editor/meshes/GridFoundation_crenellations_straight.obj"
+dest_files=["res://.godot/imported/GridFoundation_crenellations_straight.obj-e5af3f452993a4d1d6287b31fdc384ba.mesh", "res://.godot/imported/GridFoundation_crenellations_straight.obj-e5af3f452993a4d1d6287b31fdc384ba.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

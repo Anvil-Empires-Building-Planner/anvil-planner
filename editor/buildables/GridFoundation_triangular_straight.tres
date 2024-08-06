@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Buildable" load_steps=3 format=3 uid="uid://df3ig5ghvr55x"]
+
+[ext_resource type="PackedScene" uid="uid://2hp3otit76wm" path="res://editor/instances/GridFoundation_triangular_straight_instance.tscn" id="1_mc8xm"]
+[ext_resource type="Script" path="res://editor/buildables/buildable.gd" id="1_uxipt"]
+
+[resource]
+script = ExtResource("1_uxipt")
+name = "Triangular"
+instance = ExtResource("1_mc8xm")
+cost = {}

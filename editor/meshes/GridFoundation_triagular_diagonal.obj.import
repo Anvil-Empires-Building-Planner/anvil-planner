@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://k7q6wek07f3e"
+path="res://.godot/imported/GridFoundation_triagular_diagonal.obj-8173c75833a7b8e5ce5599045eb8d9ad.mesh"
+
+[deps]
+
+files=["res://.godot/imported/GridFoundation_triagular_diagonal.obj-8173c75833a7b8e5ce5599045eb8d9ad.mesh"]
+
+source_file="res://editor/meshes/GridFoundation_triagular_diagonal.obj"
+dest_files=["res://.godot/imported/GridFoundation_triagular_diagonal.obj-8173c75833a7b8e5ce5599045eb8d9ad.mesh", "res://.godot/imported/GridFoundation_triagular_diagonal.obj-8173c75833a7b8e5ce5599045eb8d9ad.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

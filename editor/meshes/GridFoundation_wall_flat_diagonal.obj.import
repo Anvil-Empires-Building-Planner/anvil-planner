@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bfbiw32ix46ok"
+path="res://.godot/imported/GridFoundation_wall_flat_diagonal.obj-93e40b6ee6ff12e52595a463b75fcc79.mesh"
+
+[deps]
+
+files=["res://.godot/imported/GridFoundation_wall_flat_diagonal.obj-93e40b6ee6ff12e52595a463b75fcc79.mesh"]
+
+source_file="res://editor/meshes/GridFoundation_wall_flat_diagonal.obj"
+dest_files=["res://.godot/imported/GridFoundation_wall_flat_diagonal.obj-93e40b6ee6ff12e52595a463b75fcc79.mesh", "res://.godot/imported/GridFoundation_wall_flat_diagonal.obj-93e40b6ee6ff12e52595a463b75fcc79.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

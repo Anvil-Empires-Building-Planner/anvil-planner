@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://editor/script/cursor.gd" id="1_8uddu"]
 [ext_resource type="Script" path="res://editor/script/camera_controller.gd" id="1_hw85h"]
-[ext_resource type="Resource" uid="uid://cuc5l1hs4w1rt" path="res://editor/buildables/foundation_3x3.tres" id="2_rrh33"]
-[ext_resource type="Resource" uid="uid://odu5lflbdktl" path="res://editor/buildables/foundation_gate.tres" id="3_wkfpg"]
+[ext_resource type="Resource" uid="uid://cuc5l1hs4w1rt" path="res://editor/buildables/GridFoundation_square_straight.tres" id="4_hjnm8"]
 [ext_resource type="Script" path="res://editor/script/placer.gd" id="4_y7a0h"]
+[ext_resource type="Resource" uid="uid://df3ig5ghvr55x" path="res://editor/buildables/GridFoundation_triangular_straight.tres" id="5_0ikj2"]
 [ext_resource type="Texture2D" uid="uid://ck1sofmxu5rna" path="res://editor/textures/uv_grid.png" id="6_skn7o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgtkv"]
@@ -69,8 +69,8 @@ light_energy = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.13381, 24.279, 2.30481)
 script = ExtResource("1_8uddu")
 overlap_label = NodePath("../CanvasLayer/Info Panel/VBoxContainer/Statuses Panel/Overlapping Status")
-cursor_mesh = ExtResource("2_rrh33")
-old_mesh = ExtResource("3_wkfpg")
+cursor_mesh = ExtResource("4_hjnm8")
+old_mesh = ExtResource("5_0ikj2")
 metadata/_edit_group_ = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
