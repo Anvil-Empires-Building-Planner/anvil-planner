@@ -1,14 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkltarc7uhfj5"]
+[gd_scene load_steps=4 format=3 uid="uid://bkltarc7uhfj5"]
 
+[ext_resource type="Script" path="res://editor/instances/BuildableInstance.gd" id="1_nrs24"]
 [ext_resource type="ArrayMesh" uid="uid://b7v761ix8485j" path="res://editor/meshes/GridFoundation_square_straight.obj" id="1_uc4af"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_r36oi"]
 points = PackedVector3Array(-1.49998, -3.04917, 1.50001, 1.49969, -3.04917, 1.49972, 1.49969, 8.94507, 1.49972, -1.4991, 8.94507, 1.49884, -1.49998, 8.94507, -1.49998, -1.49998, -3.04917, -1.49998, 1.49999, -3.04917, -1.49998, 1.49999, 8.94507, -1.49998)
 
-[node name="GridFoundationSquareStraight" type="Area3D"]
+[node name="GridFoundationSquareStraight" type="Area3D" node_paths=PackedStringArray("mesh")]
 collision_layer = 2
 collision_mask = 0
 monitoring = false
+script = ExtResource("1_nrs24")
+mesh = NodePath("GridFoundationSquareStraight")
 
 [node name="GridFoundationSquareStraight" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_uc4af")

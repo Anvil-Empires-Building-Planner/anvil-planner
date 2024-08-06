@@ -2,8 +2,6 @@ extends Node3D
 
 class_name BuildableCursor
 
-@export var overlap_label: Label
-
 var overlap_area: Area3D = null :
 	get:
 		return overlap_area
@@ -34,20 +32,16 @@ var overlap_area: Area3D = null :
 @export var cursor_mesh: Buildable
 @export var old_mesh: Buildable
 
-var is_placable: bool = false :
+var overlapping: bool = false :
 	get:
-		return is_placable
+		return overlapping
 	set(new_status):
-		is_placable = new_status
-		if !is_placable:
-			overlap_label.text = "Piece Overlapping: Yes"
-			overlap_label.label_settings.font_color = Color.RED
-		else:
-			overlap_label.text = "Piece Overlapping: No"
-			overlap_label.label_settings.font_color = Color.GREEN
+		overlapping = new_status
+		
+		if overlap_area != null:
+			(overlap_area as BuildableInstance).set_overlap_material(overlapping)
 
 func _ready():
-	is_placable = true
 	place_mesh()
 	pass
 
@@ -58,7 +52,7 @@ func _input(event):
 			
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == 1:
-			if is_placable && cursor_mesh != null:
+			if !overlapping && cursor_mesh != null:
 				var instance = cursor_mesh.instance.instantiate()
 				(instance as Node3D).position = position
 				get_parent().add_child(instance)
@@ -78,16 +72,17 @@ func place_mesh():
 		var instance = cursor_mesh.instance.instantiate() 
 		(instance as Node3D).name = "Mesh"
 		
-		overlap_area = (instance as Area3D)
+		overlap_area = (instance as BuildableInstance)
+		overlap_area.set_overlap_material(overlapping)
 		
 		add_child(instance)
 
 # Called when another object begins overlapping
 func _on_overlap_begin(_area):
-	is_placable = false
+	overlapping = true
 
 # Called when another object is no longer overlapping
 func _on_overlap_stop(_area):
 	# Check if there are any other objects that still overlap
 	if !overlap_area.has_overlapping_areas():
-		is_placable = true
+		overlapping = false

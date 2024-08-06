@@ -65,10 +65,9 @@ cursor = NodePath("../../Cursor")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 light_energy = 0.8
 
-[node name="Cursor" type="Node3D" parent="." node_paths=PackedStringArray("overlap_label")]
+[node name="Cursor" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.13381, 24.279, 2.30481)
 script = ExtResource("1_8uddu")
-overlap_label = NodePath("../CanvasLayer/Info Panel/VBoxContainer/Statuses Panel/Overlapping Status")
 cursor_mesh = ExtResource("4_hjnm8")
 old_mesh = ExtResource("5_0ikj2")
 metadata/_edit_group_ = true

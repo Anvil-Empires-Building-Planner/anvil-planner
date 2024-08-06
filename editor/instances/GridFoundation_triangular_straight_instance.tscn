@@ -1,14 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://2hp3otit76wm"]
+[gd_scene load_steps=4 format=3 uid="uid://2hp3otit76wm"]
 
+[ext_resource type="Script" path="res://editor/instances/BuildableInstance.gd" id="1_fm1to"]
 [ext_resource type="ArrayMesh" uid="uid://1tteo7jrhdwa" path="res://editor/meshes/GridFoundation_triagular_straight.obj" id="2_7rukd"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_s47hr"]
 points = PackedVector3Array(-1.5007, 8.94509, -1.49916, -1.5004, 8.94509, 1.49948, 1.49921, 8.94509, -1.49916, -1.50011, -3.04905, -1.49916, -1.49952, -3.04905, 1.49948, 1.5001, -3.04905, -1.49916)
 
-[node name="GridFoundationTriangularStraight" type="Area3D"]
+[node name="GridFoundationTriangularStraight" type="Area3D" node_paths=PackedStringArray("mesh")]
 collision_layer = 2
 collision_mask = 0
 monitoring = false
+script = ExtResource("1_fm1to")
+mesh = NodePath("GridFoundationTriagularStraight")
 
 [node name="GridFoundationTriagularStraight" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_7rukd")
