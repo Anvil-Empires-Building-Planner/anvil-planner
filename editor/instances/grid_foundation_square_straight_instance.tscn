@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnmnbygxl1of1"]
+
+[ext_resource type="Script" path="res://editor/instances/script/buildable_instance.gd" id="1_5wiqn"]
+[ext_resource type="PackedScene" uid="uid://srfwvjpfbuqu" path="res://editor/snapping/snap_point.tscn" id="3_5a8rm"]
+[ext_resource type="ArrayMesh" uid="uid://t4stssan2pn1" path="res://editor/meshes/grid_foundation_triangular_straight.obj" id="3_umhba"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qnsyg"]
+points = PackedVector3Array(-1.499, -6, -1.499, -1.499, -6, 1.499, -1.499, 6, -1.499, 1.499, -6, -1.499, 1.499, -6, 1.499, -1.499, 6, 1.499, 1.499, 6, -1.499, 1.499, 6, 1.5)
+
+[node name="GridFoundationSquareStraightInstsance" type="Area3D" node_paths=PackedStringArray("snap_points", "mesh")]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_5wiqn")
+snap_points = [NodePath("SnapPoint_1"), NodePath("SnapPoint_2"), NodePath("SnapPoint_3"), NodePath("SnapPoint_4")]
+mesh = NodePath("Square-straight")
+
+[node name="SnapPoint_1" parent="." instance=ExtResource("3_5a8rm")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.5, 6, 0)
+
+[node name="SnapPoint_2" parent="." instance=ExtResource("3_5a8rm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.5, 6, 0)
+
+[node name="SnapPoint_3" parent="." instance=ExtResource("3_5a8rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 1.5)
+
+[node name="SnapPoint_4" parent="." instance=ExtResource("3_5a8rm")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 6, -1.5)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+shape = SubResource("ConvexPolygonShape3D_qnsyg")
+
+[node name="Square-straight" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_umhba")

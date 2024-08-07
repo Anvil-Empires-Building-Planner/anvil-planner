@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://srfwvjpfbuqu"]
+
+[ext_resource type="Script" path="res://editor/snapping/script/snap_point.gd" id="1_pu4ts"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_f5wgl"]
+radius = 1.0
+
+[node name="SnapArea3D" type="Area3D" node_paths=PackedStringArray("snap_detector_collider")]
+collision_layer = 0
+collision_mask = 2
+input_ray_pickable = false
+monitorable = false
+script = ExtResource("1_pu4ts")
+snap_detector_collider = NodePath("CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_f5wgl")
+disabled = true

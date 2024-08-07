@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://e17e4o1evyw4"]
+
+[ext_resource type="Script" path="res://editor/ui/script/side_info_panel.gd" id="1_15yxi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dj4x4"]
+font_size = 20
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_orjhg"]
+font_size = 18
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pd8a7"]
+font_size = 20
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_1lj15"]
+font_size = 18
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+
+[node name="Info Panel" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+script = ExtResource("1_15yxi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Controls Panel" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Controls Title" type="Label" parent="VBoxContainer/Controls Panel"]
+layout_mode = 2
+text = "Controls"
+label_settings = SubResource("LabelSettings_dj4x4")
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/Controls Panel"]
+layout_mode = 2
+
+[node name="Controls Text" type="Label" parent="VBoxContainer/Controls Panel"]
+layout_mode = 2
+text = "Camera Move: WASD
+Camera Rotate: Q/E
+Camera Up/Down: CTRL/SPACE
+Switch Objects: ESC
+Place: Left Click"
+label_settings = SubResource("LabelSettings_orjhg")
+vertical_alignment = 1
+
+[node name="Statuses Panel" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Statuses Title" type="Label" parent="VBoxContainer/Statuses Panel"]
+layout_mode = 2
+text = "Planner Statuses"
+label_settings = SubResource("LabelSettings_pd8a7")
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/Statuses Panel"]
+layout_mode = 2
+
+[node name="Snapped Status" type="Label" parent="VBoxContainer/Statuses Panel"]
+layout_mode = 2
+text = "Piece Snapped: No"
+label_settings = SubResource("LabelSettings_1lj15")
+vertical_alignment = 1

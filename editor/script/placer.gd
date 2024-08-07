@@ -1,18 +1,43 @@
 extends Camera3D
 
+@export_category("Mouse Ray")
 @export var ray_length: int = 1000
 @export var cursor: BuildableCursor = null
 
-var target_position: Vector3 = Vector3.ZERO
+@export_category("Snapping")
+signal snapped
+@export var snap_threshold: float = 1.5
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+enum States {Free, Snapped}
+var state: States = States.Free :
+	get:
+		return state
+	set(new_state):
+		state = new_state
+		if state == States.Free:
+			snapped.emit(false)
+		elif state == States.Snapped:
+			snapped.emit(true)
+
+var target_position: Vector3 = Vector3.ZERO
+var is_snapped = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func 	_process(_delta):
 	get_target_position()
-	cursor.position = target_position
+	var snap_offset = cursor.calculate_snap()
+	var distance_to_cursor = target_position.distance_to(cursor.global_position)
+	
+	if state == States.Free:
+		if snap_offset != Vector3.INF and snap_offset.length() < snap_threshold:
+			state = States.Snapped
+			cursor.global_position = cursor.global_position - snap_offset
+		else:
+			cursor.global_position = target_position
+	elif state == States.Snapped:
+		if distance_to_cursor > snap_threshold:
+			state = States.Free
+			cursor.global_position = target_position
 	
 func get_target_position():
 	var mouse_pos = get_viewport().get_mouse_position()

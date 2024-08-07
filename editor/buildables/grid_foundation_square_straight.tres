@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Buildable" load_steps=3 format=3 uid="uid://ck4qq4plipkdm"]
+
+[ext_resource type="PackedScene" uid="uid://dnmnbygxl1of1" path="res://editor/instances/grid_foundation_square_straight_instance.tscn" id="1_iclui"]
+[ext_resource type="Script" path="res://editor/buildables/script/buildable.gd" id="2_tlubk"]
+
+[resource]
+script = ExtResource("2_tlubk")
+name = "Square"
+instance = ExtResource("1_iclui")
+cost = {}
