@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://daj7nqqc5lgmg"]
 
-[ext_resource type="Script" path="res://editor/instances/script/buildable_instance.gd" id="1_vokut"]
-[ext_resource type="PackedScene" uid="uid://srfwvjpfbuqu" path="res://editor/snapping/snap_point.tscn" id="3_jvtsk"]
-[ext_resource type="ArrayMesh" uid="uid://bkbxdr2aicrgy" path="res://editor/meshes/grid_foundation_square_straight.obj" id="3_m7k6f"]
+[ext_resource type="Script" path="res://editor/building/buildable_instances/script/buildable_instance.gd" id="1_vokut"]
+[ext_resource type="PackedScene" uid="uid://srfwvjpfbuqu" path="res://editor/building/snapping/snap_point.tscn" id="3_jvtsk"]
+[ext_resource type="ArrayMesh" uid="uid://bkbxdr2aicrgy" path="res://editor/building/meshes/grid_foundation_square_straight.obj" id="3_m7k6f"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cnybp"]
 points = PackedVector3Array(1.499, 0, -1.499, -1.499, 0, -1.499, -1.499, 0, 1.499, 1.499, 12, -1.499, -1.499, 12, -1.499, -1.499, 12, 1.499)
