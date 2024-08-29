@@ -20,13 +20,13 @@ var state: States = States.Free :
 			snapped.emit(true)
 
 var target_position: Vector3 = Vector3.ZERO
-var is_snapped = false
+var is_snapped: bool = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func 	_process(_delta):
+func _process(_delta: float) -> void:
 	get_target_position()
-	var snap_offset = cursor.calculate_snap()
-	var distance_to_cursor = target_position.distance_to(cursor.global_position)
+	var snap_offset: Vector3 = cursor.calculate_snap()
+	var distance_to_cursor: float = target_position.distance_to(cursor.global_position)
 	
 	if state == States.Free:
 		if snap_offset != Vector3.INF and snap_offset.length() < snap_threshold:
@@ -39,15 +39,15 @@ func 	_process(_delta):
 			state = States.Free
 			cursor.global_position = target_position
 	
-func get_target_position():
-	var mouse_pos = get_viewport().get_mouse_position()
-	var from = project_ray_origin(mouse_pos)
-	var to = from + project_ray_normal(mouse_pos) * ray_length
-	var space = get_world_3d().direct_space_state
-	var ray_query = PhysicsRayQueryParameters3D.new()
+func get_target_position() -> void:
+	var mouse_pos: Vector2 = get_viewport().get_mouse_position()
+	var from: Vector3 = project_ray_origin(mouse_pos)
+	var to: Vector3 = from + project_ray_normal(mouse_pos) * ray_length
+	var space: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
+	var ray_query: PhysicsRayQueryParameters3D = PhysicsRayQueryParameters3D.new()
 	ray_query.exclude = [self]
 	ray_query.from =from
 	ray_query.to = to
-	var raycast_result = space.intersect_ray(ray_query)
+	var raycast_result: Dictionary = space.intersect_ray(ray_query)
 	if not raycast_result.is_empty():
 		target_position = raycast_result.position

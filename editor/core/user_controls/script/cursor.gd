@@ -45,12 +45,12 @@ var overlapping: bool = false :
 		if _overlap_area != null:
 			_overlap_area.set_overlapped_material(overlapping)
 
-func _ready():
+func _ready() -> void:
 	overlapping = false
 	place_mesh()
 	pass
 
-func _input(event):
+func _input(event: InputEvent) -> void:
 	if (event is InputEventKey) and event.is_pressed():
 		if event.keycode == KEY_ESCAPE:
 			swap_mesh()
@@ -58,25 +58,25 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == 1:
 			if !overlapping && cursor_mesh != null:
-				var instance = cursor_mesh.instance.instantiate()
+				var instance: Node = cursor_mesh.instance.instantiate()
 				(instance as Node3D).position = position
 				print("Placed at " + str(position))
 				get_parent().add_child(instance)
 
-func swap_mesh():
-	var tmp = old_mesh
+func swap_mesh() -> void:
+	var tmp: Buildable = old_mesh
 	old_mesh = cursor_mesh
 	cursor_mesh = tmp
 	
-	var current = get_child(0)
+	var current: Node = get_child(0)
 	if current != null:
 		current.queue_free()
 	place_mesh()
 	check_if_still_overlapping()
 
-func place_mesh():
+func place_mesh() -> void:
 	if cursor_mesh != null:
-		var instance = cursor_mesh.instance.instantiate() 
+		var instance: Node = cursor_mesh.instance.instantiate() 
 		(instance as Node3D).name = "Mesh"
 		
 		_overlap_area = (instance as BuildableInstance)
@@ -96,22 +96,22 @@ func calculate_snap() -> Vector3:
 	
 	var best_snap_point: SnapOffset = SnapOffset.new()
 	for snap_point in _cursor_snap_points:
-		var snap_point_calculatedd = snap_point.calculate_best_snap_point()
-		if snap_point_calculatedd.offset_distance < best_snap_point.offset_distance:
-			best_snap_point = snap_point_calculatedd
+		var snap_point_calculated: SnapOffset = snap_point.calculate_best_snap_point()
+		if snap_point_calculated.offset_distance < best_snap_point.offset_distance:
+			best_snap_point = snap_point_calculated
 
 	return best_snap_point.offset_vec
 	
 
 # Called when another object begins overlapping
-func _on_overlap_begin(_area):
+func _on_overlap_begin(_area: Area3D) -> void:
 	overlapping = true
 
 # Called when another object is no longer overlapping
-func _on_overlap_stop(_area):
+func _on_overlap_stop(_area: Area3D) -> void:
 	# Check if there are any other objects that still overlap
 	check_if_still_overlapping()
 
-func check_if_still_overlapping():
+func check_if_still_overlapping() -> void:
 	if !_overlap_area.has_overlapping_areas():
 		overlapping = false

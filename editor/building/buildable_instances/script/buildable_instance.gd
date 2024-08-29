@@ -18,6 +18,6 @@ func set_overlapped_material(overlapped: bool) -> void:
 func get_snap_points() -> Array[SnapPoint]:
 	return snap_points
 
-func is_cursor(yes: bool):
+func is_cursor(yes: bool) -> void:
 	for snap_point in snap_points:
 		snap_point.snap_detection_active(yes)
