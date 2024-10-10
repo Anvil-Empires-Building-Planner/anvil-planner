@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://srfwvjpfbuqu"]
 
-[ext_resource type="Script" path="res://editor/snapping/script/snap_point.gd" id="1_pu4ts"]
+[ext_resource type="Script" path="res://editor/building/snapping/script/snap_point.gd" id="1_pu4ts"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_f5wgl"]
 radius = 1.0

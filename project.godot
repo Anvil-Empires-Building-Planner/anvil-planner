@@ -14,6 +14,10 @@ config/name="Anvil Planner"
 run/main_scene="res://editor/editor.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+
 [filesystem]
 
 import/fbx/enabled=false

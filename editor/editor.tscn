@@ -1,11 +1,11 @@
 [gd_scene load_steps=14 format=3 uid="uid://c3lk8mtwxyj5l"]
 
-[ext_resource type="Script" path="res://editor/script/cursor.gd" id="1_8uddu"]
-[ext_resource type="Script" path="res://editor/script/camera_controller.gd" id="1_hw85h"]
-[ext_resource type="Resource" uid="uid://ck4qq4plipkdm" path="res://editor/buildables/grid_foundation_square_straight.tres" id="4_qeorx"]
-[ext_resource type="Script" path="res://editor/script/placer.gd" id="4_y7a0h"]
-[ext_resource type="Resource" uid="uid://cvb4ikoda48qp" path="res://editor/buildables/grid_foundation_triangular_straight.tres" id="5_b8gof"]
-[ext_resource type="Texture2D" uid="uid://ck1sofmxu5rna" path="res://editor/textures/uv_grid.png" id="6_skn7o"]
+[ext_resource type="Script" path="res://editor/core/user_controls/script/cursor.gd" id="1_8uddu"]
+[ext_resource type="Script" path="res://editor/core/user_controls/script/camera_controller.gd" id="1_hw85h"]
+[ext_resource type="Resource" uid="uid://ck4qq4plipkdm" path="res://editor/building/buildable_data/grid_foundation_square_straight.tres" id="4_qeorx"]
+[ext_resource type="Script" path="res://editor/core/user_controls/script/placer.gd" id="4_y7a0h"]
+[ext_resource type="Resource" uid="uid://cvb4ikoda48qp" path="res://editor/building/buildable_data/grid_foundation_triangular_straight.tres" id="5_b8gof"]
+[ext_resource type="Texture2D" uid="uid://ck1sofmxu5rna" path="res://editor/core/textures/uv_grid.png" id="6_skn7o"]
 [ext_resource type="PackedScene" uid="uid://e17e4o1evyw4" path="res://editor/ui/side_info_panel.tscn" id="7_ma0vc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgtkv"]

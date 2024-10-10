@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bkbxdr2aicrgy"
+path="res://.godot/imported/grid_foundation_square_straight.obj-986a2e34adb79f2ff67fd21f0804d19c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/grid_foundation_square_straight.obj-986a2e34adb79f2ff67fd21f0804d19c.mesh"]
+
+source_file="res://editor/building/meshes/grid_foundation_square_straight.obj"
+dest_files=["res://.godot/imported/grid_foundation_square_straight.obj-986a2e34adb79f2ff67fd21f0804d19c.mesh", "res://.godot/imported/grid_foundation_square_straight.obj-986a2e34adb79f2ff67fd21f0804d19c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
